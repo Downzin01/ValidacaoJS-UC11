@@ -39,3 +39,24 @@
 - **máximo 2 caracteres**
 - **campo obrigatório**
 - tem que existir
+
+### CEP
+- **Exatamente 8 caracteres**
+- **campo obrigatório**
+- tem que existir
+
+### CPF
+- **Exatamente 11 caracteres**
+- **campo obrigatório**
+- tem que existir
+
+### CNPJ
+- **Exatamente 14 caracteres**
+- **campo obrigatório**
+- tem que existir
+
+### Data Nascimento
+**campo obrigatório**
+**ser maior ou igual 18 anos**
+**não pode ter data futura**
+- tem que existir
