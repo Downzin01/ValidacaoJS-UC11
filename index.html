@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Usuário</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <main class="container">
+            <div class="card mb-3" style="max-width: 670px;">
+                <div class="row g-0">
+                    <div class="col-8">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <h1>Cadastro de Usuário</h1>
+                                    <p>Crie sua conta em nossa comunidade !!!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <form action="spoiler.html" method="get" id="form" class="row">
+
+                                        <div class="mb-3 col-12">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-person"></i>
+                                                <input type="text" class="form-control" placeholder="NOME COMPLETO"
+                                                    name="nome" id="nome" minlength="3" maxlength="100" onblur="verificarNome()" required>
+                                                <span id="mensagem-erro-nome"></span>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-12">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-envelope-at"></i>
+                                                <input type="text" class="form-control" id="email" name="email" onblur="verificarEmail()" placeholder="EMAIL COMPLETO" />
+                                                <span id="mensagem-erro-email"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-6">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-lock"></i>
+                                                <input type="password" class="form-control" id="senha" name="senha" onblur="validaSenha()"
+                                                    placeholder="SENHA">
+                                                    <span id="erro-senha"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-6">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-lock-fill"></i>
+                                                <input type="password" class="form-control" id="confirmar_senha" onblur="confirmarSenha()"
+                                                    name="confirmar_senha" placeholder="CONFIRMAR SENHA">
+                                                <span id="mensagem-erro-confirmar-senha"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-8">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt"></i>
+                                                <input type="text" class="form-control" id="telefone" name="telefone" oninput="aplicarMascaraTelefone(event)" onblur="validatelefone()"
+                                                placeholder="(XX) XXXXX-XXXX">
+                                            <span id="mensagem-erro-telefone"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-8">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt"></i>
+                                                <input type="text" class="form-control" id="cidade" name="cidade" onblur="validacidade()"
+                                                    placeholder="CIDADE">
+                                                    <span id="mensagem-cidade"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <input type="text" class="form-control" id="estado" name="estado" onblur="validaestado()"
+                                                    placeholder="ESTADO">
+                                                    <span id="mensagem-estado"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <input type="text" class="form-control" id="cep" name="cep" oninput="aplicarMascaraCEP(event)" onblur="validaCEP()"
+                                                    placeholder="XXXXX-XXX">
+                                                    <span id="mensagem-cep"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <input type="text" class="form-control"id="cpf" name="cpf" oninput="aplicarMascaraCPF(event)" onblur="validarCPF()"
+                                                    placeholder="XXX.XXX.XXX-XX">
+                                                    <span id="mensagem-cpf"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <input type="text" class="form-control" id="cnpj" name="cnpj" oninput="aplicarMascaraCNPJ(event)" onblur="validarCNPJ()"
+                                                    placeholder="XX.XXX.XXX/XXXX-XX">
+                                                    <span id="mensagem-cnpj"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 col-4">
+                                            <div class="form-group left-inner-addon">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" onblur="validaDataNascimento()"
+                                                    placeholder="DATA DE NASCIMENTO">
+                                                    <span id="mensagem-data-nascimento"></span>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="validacao.js"></script>
+    </body>
+</html>
